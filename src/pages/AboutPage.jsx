@@ -1,6 +1,11 @@
 import Header from "../assets/components/Header"    
 
 export default function AboutPage () {
-    return <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ea inventore a quod, similique molestias libero expedita nisi id officia odio, pariatur unde laborum aut aliquid quasi nemo aspernatur hic.</p>
+    return <>
+            <div className="about-us my-4">
+             <h1 className="text-center">About Us</h1>
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit cum tempore illo, quibusdam quis voluptas eaque earum in alias reiciendis officiis error labore aliquam facilis sapiente perspiciatis deserunt magnam ducimus.</p>
+            </div>
+           </>
 
 }
