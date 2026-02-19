@@ -11,7 +11,9 @@ main {
 .jumbo {
     height: 400px;
     color: white;
-    background-image: url(../img/Extra\ Saving.png);
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3)), 
+    url(../img/Extra\ Saving.png);
     background-position: center;
 }
 
@@ -23,8 +25,9 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.801);
 }
 
-
-
+.jumbo p {
+    font-size: 1.2rem;
+}
 
 .products-showcase .card {
     width: 50%;
