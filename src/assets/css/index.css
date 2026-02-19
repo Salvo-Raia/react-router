@@ -32,6 +32,12 @@ main {
 .products-showcase .card {
     width: 50%;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.products-showcase .card img {
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Product card */ 
@@ -45,5 +51,12 @@ main {
     height: 250px;
     width: auto;
     object-fit: contain;
+}
+
+.spinner {
+    font-size: 30px;
+    width: 210px;
+    margin: 0 auto;
+
 }
 

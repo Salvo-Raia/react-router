@@ -5,22 +5,36 @@ import axios from "axios";
 export default function ProductDetailPage() {
   const { id } = useParams();
   const currentPageId = parseInt(id);
-
+  const [loading, setLoading] = useState(true);
   const [productCard, setProductCard] = useState([]);
   const redirect = useNavigate();
 
   const fetchProducts = () => {
-    axios.get(`https://fakestoreapi.com/products/${id}`).then((res) => {
-      console.log(res.data);
-      setProductCard(res.data);
-    });
+    axios
+      .get(`https://fakestoreapi.com/products/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        setProductCard(res.data);
+      })
+      .finally(() => setLoading(false));
   };
 
   useEffect(fetchProducts, [id]);
 
-  //   if (!productCard) {
-  //     redirect("/products");
-  //   }
+  if (!productCard) {
+    redirect("/products");
+  }
+
+  if (loading) {
+    return (
+      <div className="spinner my-4">
+        <div className="spinner-border text-success" role="status">
+          <span className="sr-only "></span>
+        </div>
+        <span className="ps-3 text-success">loading...</span>
+      </div>
+    );
+  }
 
   return (
     <div className="detail-card row g-4 border rounded bg-light p-4 my-5">
@@ -46,20 +60,22 @@ export default function ProductDetailPage() {
         </div>
         <div className="d-flex justify-content-evenly">
           <button
-            className="btn btn-warning"
-            className="btn btn-warning"
+            className="btn btn-success"
             onClick={() => redirect("/products/" + (currentPageId - 1))}
             disabled={currentPageId <= 1}
           >
+            <i class="bi bi-arrow-left pe-2"></i>
             Articolo Precedente
           </button>
-          <button className="btn btn-primary">Add to Cart</button>
+          <button className="btn btn-primary">
+            <i class="bi bi-cart-plus pe-2"></i>Add to Cart
+          </button>
           <button
-            className="btn btn-warning"
+            className="btn btn-success"
             onClick={() => redirect("/products/" + (currentPageId + 1))}
             disabled={currentPageId >= 20}
           >
-            Prossimo articolo
+            Prossimo articolo<i class="bi bi-arrow-right ps-2"></i>
           </button>
         </div>
       </div>
