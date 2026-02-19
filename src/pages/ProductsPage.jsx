@@ -19,19 +19,19 @@ export default function ProductsPage() {
         {fakeProducts.map((product) => {
           return (
             <div key={product.id} className="col">
-              <div class="card h-100 d-flex flex-column p-3">
+              <div className="card h-100 d-flex flex-column p-3">
                 <img
                   src={product.image}
-                  class="card-img-top img-fluid"
+                  className="card-img-top img-fluid"
                   alt={product.title}
                   title={product.title}
                 />
-                <div class="card-body d-flex flex-column justify-content-between">
+                <div className="card-body d-flex flex-column justify-content-between">
                   <div>
                     <h4>{product.title}</h4>
                     <p className="text-secondary">{product.category}</p>
                   </div>
-                  <p class="card-text">
+                  <p className="card-text">
                     {product.description.slice(0, 50) + "..."}
                   </p>
                   <div className="d-flex justify-content-between">
@@ -41,7 +41,7 @@ export default function ProductsPage() {
                     </p>
                     <p className="d-block">
                       <strong className="pe-2">
-                        <i class="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
                       </strong>
                       {product.rating.rate}
                     </p>

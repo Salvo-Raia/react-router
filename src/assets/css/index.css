@@ -3,10 +3,39 @@ header img {
     height: 100px;
 }
 
+/*HomePage */ 
+main {
+    margin-bottom: 50px;
+}
+
+.jumbo {
+    height: 400px;
+    color: white;
+    background-image: url(../img/Extra\ Saving.png);
+    background-position: center;
+}
+
+.jumbo h2, 
+.jumbo p {
+    width: 40%;
+    font-weight: 800;
+    padding-left: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.801);
+}
+
+
+
+
+.products-showcase .card {
+    width: 50%;
+    margin: 0 auto;
+}
+
 /* Product card */ 
 .card {
     border-top: 4px solid rgb(22, 141, 48);
     border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card img {
