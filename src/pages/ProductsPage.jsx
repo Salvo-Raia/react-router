@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const fakeStoreProducts = "https://fakestoreapi.com/products";
 
 export default function ProductsPage() {
@@ -19,35 +20,37 @@ export default function ProductsPage() {
         {fakeProducts.map((product) => {
           return (
             <div key={product.id} className="col">
-              <div className="card h-100 d-flex flex-column p-3">
-                <img
-                  src={product.image}
-                  className="card-img-top img-fluid"
-                  alt={product.title}
-                  title={product.title}
-                />
-                <div className="card-body d-flex flex-column justify-content-between">
-                  <div>
-                    <h4>{product.title}</h4>
-                    <p className="text-secondary">{product.category}</p>
-                  </div>
-                  <p className="card-text">
-                    {product.description.slice(0, 50) + "..."}
-                  </p>
-                  <div className="d-flex justify-content-between">
-                    <p className="d-block">
-                      {product.price}
-                      <span>$</span>
+              <Link to={"/products/" + product.id}>
+                <div className="card h-100 d-flex flex-column p-3">
+                  <img
+                    src={product.image}
+                    className="card-img-top img-fluid"
+                    alt={product.title}
+                    title={product.title}
+                  />
+                  <div className="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h4>{product.title}</h4>
+                      <p className="text-secondary">{product.category}</p>
+                    </div>
+                    <p className="card-text">
+                      {product.description.slice(0, 50) + "..."}
                     </p>
-                    <p className="d-block">
-                      <strong className="pe-2">
-                        <i className="bi bi-star-fill"></i>
-                      </strong>
-                      {product.rating.rate}
-                    </p>
+                    <div className="d-flex justify-content-between">
+                      <p className="d-block">
+                        {product.price}
+                        <span>$</span>
+                      </p>
+                      <p className="d-block">
+                        <strong className="pe-2">
+                          <i className="bi bi-star-fill"></i>
+                        </strong>
+                        {product.rating.rate}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}
