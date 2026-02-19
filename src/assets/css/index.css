@@ -2,3 +2,15 @@
 header img {
     height: 100px;
 }
+
+/* Product card */ 
+.card {
+    border-top: 4px solid rgb(22, 141, 48);
+    border-radius: 20px;
+}
+
+.card img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+}

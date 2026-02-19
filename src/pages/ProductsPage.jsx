@@ -1,20 +1,57 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
-const fakeStoreProducts = "https://fakestoreapi.com/products"
+import axios from "axios";
+import { useState, useEffect } from "react";
+const fakeStoreProducts = "https://fakestoreapi.com/products";
 
-export default function ProductsPage () {
-    const [fakeProducts, setFakeProducts] = useState ([""]);
-    const fetchProducts = () => {
-        axios.get(fakeStoreProducts)
-             .then((res) => {
-                console.log(res.data);
-                setFakeProducts(res.data)
-             })
-    }
+export default function ProductsPage() {
+  const [fakeProducts, setFakeProducts] = useState([]);
+  const fetchProducts = () => {
+    axios.get(fakeStoreProducts).then((res) => {
+      console.log(res.data);
+      setFakeProducts(res.data);
+    });
+  };
 
-    useEffect(fetchProducts, []);
+  useEffect(fetchProducts, []);
 
-    return <>
-           <p>Varie card prodotti Coming soon</p>
-           </>
+  return (
+    <>
+      <div className="row row-cols-4 g-4 my-4">
+        {fakeProducts.map((product) => {
+          return (
+            <div key={product.id} className="col">
+              <div class="card h-100 d-flex flex-column p-3">
+                <img
+                  src={product.image}
+                  class="card-img-top img-fluid"
+                  alt={product.title}
+                  title={product.title}
+                />
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h4>{product.title}</h4>
+                    <p className="text-secondary">{product.category}</p>
+                  </div>
+                  <p class="card-text">
+                    {product.description.slice(0, 50) + "..."}
+                  </p>
+                  <div className="d-flex justify-content-between">
+                    <p className="d-block">
+                      {product.price}
+                      <span>$</span>
+                    </p>
+                    <p className="d-block">
+                      <strong className="pe-2">
+                        <i class="bi bi-star-fill"></i>
+                      </strong>
+                      {product.rating.rate}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
 }
