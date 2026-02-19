@@ -37,15 +37,15 @@ export default function ProductsPage() {
                       {product.description.slice(0, 50) + "..."}
                     </p>
                     <div className="d-flex justify-content-between">
-                      <p className="d-block">
+                      <p className="d-block fw-bold">
                         {product.price}
                         <span>$</span>
                       </p>
                       <p className="d-block">
-                        <strong className="pe-2">
+                        <strong className="pe-2 fw-bold">
                           <i className="bi bi-star-fill"></i>
                         </strong>
-                        {product.rating.rate}
+                        {/* {product.rating.rate} */}
                       </p>
                     </div>
                   </div>
