@@ -20,7 +20,10 @@ export default function ProductsPage() {
         {fakeProducts.map((product) => {
           return (
             <div key={product.id} className="col">
-              <Link to={"/products/" + product.id}>
+              <Link
+                to={"/products/" + product.id}
+                className="text-decoration-none"
+              >
                 <div className="card h-100 d-flex flex-column p-3">
                   <img
                     src={product.image}

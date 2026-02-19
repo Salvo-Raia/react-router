@@ -47,7 +47,3 @@ main {
     object-fit: contain;
 }
 
-.detail-card {
-    border: 1px solid green;
-    border-radius: 5px 50px 50px 0;
-}

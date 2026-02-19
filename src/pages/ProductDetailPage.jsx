@@ -1,22 +1,32 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
-  const [productCard, setProductCard] = useState([null]);
+  const [productCard, setProductCard] = useState([]);
+  const redirect = useNavigate();
 
   const fetchProducts = () => {
-    axios.get(`https://fakestoreapi.com/products/${id}`).then((res) => {
-      console.log(res.data);
-      setProductCard(res.data);
-    });
+    axios
+      .get(`https://fakestoreapi.com/products/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        setProductCard(res.data);
+      })
+      .catch((error) => {
+        redirect("/products");
+      });
   };
 
   useEffect(fetchProducts, []);
 
+  if (!productCard) {
+    redirect("/products");
+  }
+
   return (
-    <div className="detail-card row g-4 bg-light p-4 my-5">
+    <div className="detail-card row g-4 border rounded bg-light p-4 my-5">
       <div className="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
         <img
           src={productCard.image}
