@@ -1,29 +1,26 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
+  const currentPageId = parseInt(id);
+
   const [productCard, setProductCard] = useState([]);
   const redirect = useNavigate();
 
   const fetchProducts = () => {
-    axios
-      .get(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => {
-        console.log(res.data);
-        setProductCard(res.data);
-      })
-      .catch((error) => {
-        redirect("/products");
-      });
+    axios.get(`https://fakestoreapi.com/products/${id}`).then((res) => {
+      console.log(res.data);
+      setProductCard(res.data);
+    });
   };
 
-  useEffect(fetchProducts, []);
+  useEffect(fetchProducts, [id]);
 
-  if (!productCard) {
-    redirect("/products");
-  }
+  //   if (!productCard) {
+  //     redirect("/products");
+  //   }
 
   return (
     <div className="detail-card row g-4 border rounded bg-light p-4 my-5">
@@ -47,7 +44,24 @@ export default function ProductDetailPage() {
             </p>
           </div>
         </div>
-        <button className="btn btn-primary btn-lg mt-4">Add to Cart</button>
+        <div className="d-flex justify-content-evenly">
+          <button
+            className="btn btn-warning"
+            className="btn btn-warning"
+            onClick={() => redirect("/products/" + (currentPageId - 1))}
+            disabled={currentPageId <= 1}
+          >
+            Articolo Precedente
+          </button>
+          <button className="btn btn-primary">Add to Cart</button>
+          <button
+            className="btn btn-warning"
+            onClick={() => redirect("/products/" + (currentPageId + 1))}
+            disabled={currentPageId >= 20}
+          >
+            Prossimo articolo
+          </button>
+        </div>
       </div>
     </div>
   );

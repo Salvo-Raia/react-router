@@ -48,7 +48,7 @@ export default function ProductsPage() {
                         <strong className="pe-2 fw-bold">
                           <i className="bi bi-star-fill"></i>
                         </strong>
-                        {/* {product.rating.rate} */}
+                        {product.rating.rate}
                       </p>
                     </div>
                   </div>
