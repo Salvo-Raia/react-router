@@ -16,7 +16,7 @@ export default function ProductDetailPage() {
   useEffect(fetchProducts, []);
 
   return (
-    <div className="row g-4 my-5">
+    <div className="row g-4 border bg-light border rounded p-4 my-5">
       <div className="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
         <img
           src={productCard.image}
