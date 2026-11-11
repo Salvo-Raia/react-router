@@ -1,43 +1,94 @@
-#Esercizio: React Router Store
-Nome repo: `react-router`
+![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
 
-##Consegna giorno 1
+# 🎓 Exercise 39/50 - React Router Store
 
-Creiamo il frontend del nostro mini e-commerce e le sue pagine principali!
-Useremo Fake Store API come backend fittizio per simulare i dati dei prodotti.
+Build the frontend of a mini e-commerce using React Router DOM. The application features multiple pages, product listings fetched from Fake Store API, and dynamic product detail pages.
 
-https://fakestoreapi.com/
+## 📌 Project Overview
 
-**Obiettivi**
+| Property | Details |
+|:--|:--|
+| Repository | `react-router` |
+| Category | Boolean Tech Academy |
+| Type | Exercise |
+| Exercise | 39/50 |
 
-1. Installiamo **React Router DOM:** `npm i react-router-dom`
-2. Creiamo almeno 3 pagine principali:
-    - Homepage (con un messaggio di benvenuto o immagine promozionale)
-    - Chi siamo
-    - Prodotti (pagina che mostrerà la lista dei prodotti prendendoli da https://fakestoreapi.com/products)
-3. Implementiamo una Navbar visibile in tutte le pagine per navigare tra di esse
+## 🎯 Assignment
 
-**Bonus**
+Create the frontend of a mini e-commerce application, implementing its main pages and navigation system.
 
-- Centralizziamo la Navbar usando un componente `Layout`
-- Gestiamo la classe `active` per i link attivi nella Navbar
+Use **Fake Store API**as a mock backend to retrieve product data.
 
-##Consegna giorno 2
+`https://fakestoreapi.com/`
 
-Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
+### Milestone 1 - Install React Router
 
-**Obiettivi**
+Install React Router DOM:
 
-Nella pagina Prodotti, ogni prodotto deve essere cliccabile (usa <Link>)
-Aggiungiamo la pagina di dettaglio per ogni prodotto, con le informazioni prese da https://fakestoreapi.com/products/:id
-Configuriamo il routing dinamico per leggere l’id del prodotto dalla URL
+```bash
+npm i react-router-dom
+```
 
-**Bonus**
+### Milestone 2 - Create the Main Pages
 
-Aggiungiamo una navigazione programmatica che riporti alla pagina di listato se viene cercato un prodotto che non esiste;
-Aggiungiamo una pagina 404;
-Aggiungiamo un loading per caricamento del dettaglio prodotto.
+Build at least three main pages:
 
-**Super Bonus**
+- **Homepage:** Display a welcome message or promotional image.
+- **About Us:** Introduce the store.
+- **Products:** Display a list of products fetched from `https://fakestoreapi.com/products`.
 
-Aggiungiamo nella pagina di dettaglio dei pulsanti per navigare al prodotto precedente o successivo (usando useNavigate() programmaticamente)
+### Milestone 3 - Navigation Bar
+
+Implement a navigation bar visible across all pages, allowing users to navigate between them.
+
+### Milestone 4 - Product Details
+
+Extend the application by adding a dedicated detail page for each product.
+
+- Make each product in the Products page clickable using React Router's `<Link>` component.
+- Create a product detail page displaying information fetched from `https://fakestoreapi.com/products/:id`.
+- Configure dynamic routing to retrieve the product `id` from the URL.
+
+### Bonus 1 - Layout Component
+
+Centralize the navigation bar by creating a reusable `Layout` component.
+
+### Bonus 2 - Active Navigation Links
+
+Manage the `active` class to visually highlight the currently active navigation link.
+
+### Bonus 3 - Handle Missing Products
+
+Implement programmatic navigation to return users to the product listing if they request a product that does not exist.
+
+### Bonus 4 - 404 Page
+
+Create a dedicated 404 page for routes that do not exist.
+
+### Bonus 5 - Loading State
+
+Display a loading indicator while the product detail data is being fetched.
+
+### Super Bonus - Previous and Next Products
+
+Add buttons to the product detail page to navigate to the previous or next product using `useNavigate()` programmatically.
+
+## 🛠️ Technologies
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+
+## 💡 What I Learned
+
+- Setting up client-side routing with React Router DOM.
+- Creating multiple pages within a React application.
+- Building reusable layout components.
+- Navigating between pages using `Link`.
+- Highlighting active navigation links.
+- Implementing dynamic routes and URL parameters.
+- Fetching data from external APIs.
+- Managing loading and error states.
+- Using programmatic navigation with `useNavigate()`.
+
+## ©️ Credits
+
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
