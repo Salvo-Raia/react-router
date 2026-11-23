@@ -20,25 +20,25 @@ Use **Fake Store API** as a mock backend to retrieve product data.
 
 #### Milestone 1: Install React Router
 
-Install React Router DOM via npm:
+Install React Router DOM via npm.
 
 ```bash
 npm i react-router-dom
 ```
 
-#### Milestone 2: Create the Main Pages
+#### Milestone 2: Create the main pages
 
-Build at least three main pages:
+Build at least three main pages.
 
 - **Homepage:** Display a welcome message or promotional image.
 - **About Us:** Introduce the store.
 - **Products:** Display a list of products fetched from `https://fakestoreapi.com/products`.
 
-#### Milestone 3: Navigation Bar
+#### Milestone 3: Navigation bar
 
 Implement a navigation bar visible across all pages, allowing users to navigate between them.
 
-#### Milestone 4: Product Details
+#### Milestone 4: Product details
 
 Extend the application by adding a dedicated detail page for each product.
 
@@ -47,6 +47,8 @@ Extend the application by adding a dedicated detail page for each product.
 - Configure dynamic routing to retrieve the product `id` from the URL.
 
 #### Bonus challenge
+
+Try to implement the following additional features.
 
 - Centralize the navigation bar by creating a reusable `Layout` component.
 
@@ -63,7 +65,11 @@ Extend the application by adding a dedicated detail page for each product.
 Add buttons to the product detail page to navigate to the previous or next product using `useNavigate()` programmatically.
 
 ## Technologies
-![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) 
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) 
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
 ## What I learned
 
