@@ -51,13 +51,9 @@ Extend the application by adding a dedicated detail page for each product.
 Try to implement the following additional features.
 
 - Centralize the navigation bar by creating a reusable `Layout` component.
-
 - Manage the `active` class to visually highlight the currently active navigation link.
-
 - Implement programmatic navigation to return users to the product listing if they request a product that does not exist.
-
 - Create a dedicated 404 page for routes that do not exist.
-
 - Display a loading indicator while the product detail data is being fetched.
 
 #### Super bonus challenge
