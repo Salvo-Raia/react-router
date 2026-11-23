@@ -8,7 +8,7 @@ Building the frontend of a mini e-commerce using React Router DOM. The applicati
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| react-router | React Router Store | Exercise | React Router, dynamic routing & API integration | 39/50 |
+| react-router | React Router Store | Exercise | React Router, dynamic routing, API integration | 39/50 |
 
 ## Assignment
 
